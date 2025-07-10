@@ -8,7 +8,6 @@
  const{isOwner}=require("../middleware.js");
  const multer=require('multer');
  const{storage}=require("../cloudconfig.js");
-//  const upload=multer({dest:'/uploads'});
 const upload=multer({storage});
  const validateListing=(req,res,next)=>{
     let{error}=listingSchema.validate(req.body);
